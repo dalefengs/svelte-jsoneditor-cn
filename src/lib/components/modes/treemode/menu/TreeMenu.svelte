@@ -48,7 +48,7 @@
   $: expandMenuItem = {
     type: 'button',
     icon: faJSONEditorExpand,
-    title: 'Expand all',
+    title: '展开所有',
     className: 'jse-expand-all',
     onClick: onExpandAll,
     disabled: !isObjectOrArray(json)
@@ -58,7 +58,7 @@
   $: collapseMenuItem = {
     type: 'button',
     icon: faJSONEditorCollapse,
-    title: 'Collapse all',
+    title: '折叠所有',
     className: 'jse-collapse-all',
     onClick: onCollapseAll,
     disabled: !isObjectOrArray(json)
@@ -68,7 +68,7 @@
   $: searchMenuItem = {
     type: 'button',
     icon: faSearch,
-    title: 'Search (Ctrl+F)',
+    title: '搜索 (Ctrl+F)',
     className: 'jse-search',
     onClick: handleToggleSearch,
     disabled: json === undefined
@@ -85,7 +85,7 @@
         {
           type: 'button',
           icon: faSortAmountDownAlt,
-          title: 'Sort',
+          title: '排序',
           className: 'jse-sort',
           onClick: onSort,
           disabled: readOnly || json === undefined
@@ -93,7 +93,7 @@
         {
           type: 'button',
           icon: faFilter,
-          title: 'Transform contents (filter, sort, project)',
+          title: '转换内容 (过滤, 排序, 分类)',
           className: 'jse-transform',
           onClick: onTransform,
           disabled: readOnly || json === undefined
@@ -112,7 +112,7 @@
         {
           type: 'button',
           icon: faUndo,
-          title: 'Undo (Ctrl+Z)',
+          title: '撤销 (Ctrl+Z)',
           className: 'jse-undo',
           onClick: onUndo,
           disabled: !historyState.canUndo
@@ -120,7 +120,7 @@
         {
           type: 'button',
           icon: faRedo,
-          title: 'Redo (Ctrl+Shift+Z)',
+          title: '重做 (Ctrl+Shift+Z)',
           className: 'jse-redo',
           onClick: onRedo,
           disabled: !historyState.canRedo
@@ -138,7 +138,7 @@
         {
           type: 'button',
           icon: faCopy,
-          title: 'Copy (Ctrl+C)',
+          title: '复制 (Ctrl+C)',
           className: 'jse-copy',
           onClick: onCopy,
           disabled: !hasSelectionContents

@@ -13,14 +13,14 @@
     <div class="jse-welcome-title">Empty document</div>
     {#if !readOnly}
       <div class="jse-welcome-info">
-        You can paste clipboard data using <b>Ctrl+V</b>, or use the following options:
+        您可以使用快捷键粘贴剪贴板数据 <b>Ctrl+V</b>, 或使用以下选项:
       </div>
       <button
-        title={"Create an empty JSON object (press '{')"}
+        title={"创建一个空的 JSON 对象 (输入 '{')"}
         on:click|stopPropagation={() => onCreateObject()}>Create object</button
       >
       <button
-        title={"Create an empty JSON array (press '[')"}
+        title={"创建一个空的 JSON 数组 (输入 '[')"}
         on:click|stopPropagation={() => onCreateArray()}>Create array</button
       >
     {/if}

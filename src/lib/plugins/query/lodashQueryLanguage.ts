@@ -7,7 +7,7 @@ import { isInteger } from '$lib/utils/typeUtils.js'
 
 const description = `
 <p>
-  Enter a JavaScript function to filter, sort, or transform the data.
+  使用JavaScript函数来过滤、排序或转换数据。
   You can use <a href="https://lodash.com" target="_blank" rel="noopener noreferrer">Lodash</a>
   functions like <code>_.map</code>, <code>_.filter</code>,
   <code>_.orderBy</code>, <code>_.sortBy</code>, <code>_.groupBy</code>,

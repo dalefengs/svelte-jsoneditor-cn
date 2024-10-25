@@ -42,7 +42,7 @@
         {
           type: 'button',
           icon: faJSONEditorFormat,
-          title: 'Format JSON: add proper indentation and new lines (Ctrl+I)',
+          title: '格式化JSON：添加适当的缩进和新行 (Ctrl+I)',
           className: 'jse-format',
           onClick: onFormat,
           disabled: readOnly || !canFormat
@@ -50,7 +50,7 @@
         {
           type: 'button',
           icon: faJSONEditorCompact,
-          title: 'Compact JSON: remove all white spacing and new lines (Ctrl+Shift+I)',
+          title: '压缩JSON：删除所有空格和换行 (Ctrl+Shift+I)',
           className: 'jse-compact',
           onClick: onCompact,
           disabled: readOnly || !canCompact
@@ -61,7 +61,7 @@
         {
           type: 'button',
           icon: faSortAmountDownAlt,
-          title: 'Sort',
+          title: '排序',
           className: 'jse-sort',
           onClick: onSort,
           disabled: readOnly || !canSort
@@ -69,7 +69,7 @@
         {
           type: 'button',
           icon: faFilter,
-          title: 'Transform contents (filter, sort, project)',
+          title: '转换内容 (过滤, 排序, 分类)',
           className: 'jse-transform',
           onClick: onTransform,
           disabled: readOnly || !canTransform
@@ -81,7 +81,7 @@
         {
           type: 'button',
           icon: faUndo,
-          title: 'Undo (Ctrl+Z)',
+          title: '撤销 (Ctrl+Z)',
           className: 'jse-undo',
           onClick: onUndo,
           disabled: !canUndo
@@ -89,7 +89,7 @@
         {
           type: 'button',
           icon: faRedo,
-          title: 'Redo (Ctrl+Shift+Z)',
+          title: '重做 (Ctrl+Shift+Z)',
           className: 'jse-redo',
           onClick: onRedo,
           disabled: !canRedo

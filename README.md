@@ -1,3 +1,17 @@
+# 说明
+汉化了部分菜单
+```
+npm install
+npm run build:svelte && npm run build:vanilla
+```
+本人使用的nodejs 18.x重新编译，之前使用低版本12.x会报错
+
+效果：
+![图片1](https://raw.githubusercontent.com/FreezeJ/svelte-jsoneditor/main/misc/1.png)
+![图片2](https://raw.githubusercontent.com/FreezeJ/svelte-jsoneditor/main/misc/2.png)
+![图片3](https://raw.githubusercontent.com/FreezeJ/svelte-jsoneditor/main/misc/3.png)
+
+
 # svelte-jsoneditor
 
 A web-based tool to view, edit, format, transform, and validate JSON.

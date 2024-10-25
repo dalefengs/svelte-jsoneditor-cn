@@ -986,8 +986,8 @@
       ? [
           {
             icon: faWrench,
-            text: 'Auto repair',
-            title: 'Automatically repair JSON',
+            text: '自动修复',
+            title: '自动修复JSON',
             onClick: handleRepair
           },
           repairActionShowMe
@@ -1037,18 +1037,18 @@
           )}.`}
         actions={[
           {
-            text: 'Open anyway',
-            title: 'Open the document in text mode. This may freeze or crash your browser.',
+            text: '强制打开',
+            title: '使用文本模式打开，但有可能造成浏览器崩溃',
             onClick: handleAcceptTooLarge
           },
           {
-            text: 'Open in tree mode',
-            title: 'Open the document in tree mode. Tree mode can handle large documents.',
+            text: '使用树形模式打开',
+            title: '使用树形模式打开，树形模式可以处理大文件',
             onClick: handleSwitchToTreeMode
           },
           {
-            text: 'Cancel',
-            title: 'Cancel opening this large document.',
+            text: '取消',
+            title: '取消打开该文档',
             onClick: cancelLoadTooLarge
           }
         ]}
