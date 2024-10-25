@@ -956,7 +956,7 @@
 
     const props = {
       tip: showTip
-        ? 'Tip: you can open this context menu via right-click or with Ctrl+Q'
+        ? 'Tip: 您可以通过右键或 Ctrl+Q 打开右键菜单'
         : undefined,
       items,
       onRequestClose: function () {

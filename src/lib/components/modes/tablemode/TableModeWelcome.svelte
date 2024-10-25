@@ -18,7 +18,7 @@
   export let onChangeMode: OnChangeMode
   export let onClick: () => void
 
-  $: action = readOnly ? 'View' : 'Edit'
+  $: action = readOnly ? '查看' : '编辑'
 
   let nestedArrayPaths: JSONPath[]
   $: nestedArrayPaths = json
@@ -30,13 +30,13 @@
   $: isEmptyDocument = json === undefined && (text === '' || text === undefined)
 
   $: documentType = hasNestedArrays
-    ? 'Object with nested arrays'
+    ? '具有嵌套数组的对象'
     : isEmptyDocument
-      ? 'An empty document'
+      ? '一个空文档'
       : isJSONObject(json)
-        ? 'An object'
+        ? '一个对象'
         : isJSONArray(json)
-          ? 'An empty array' // note: can also be an array with objects but without properties
+          ? '一个空数组' // note: can also be an array with objects but without properties
           : `A ${valueType(json, parser)}`
 
   function countItems(nestedArrayPath: JSONPath): number {
@@ -51,15 +51,14 @@
     <div class="jse-nested-arrays-title">{documentType}</div>
     <div class="jse-nested-arrays-info">
       {#if hasNestedArrays}
-        An object cannot be opened in table mode. You can open a nested array instead, or open the
-        document in tree mode.
+        对象不能使用表格模式。您可以改为打开嵌套数组，或以树模式打开文档。
       {:else}
-        {documentType} cannot be opened in table mode.
+        {documentType} 不能使用表格模式
       {/if}
       {#if isEmptyDocument && !readOnly}
-        You can open the document in tree mode instead, or paste a JSON Array using <b>Ctrl+V</b>.
+        你可以选择以树形模式打开文档，或者粘贴一个JSON数组。 <b>Ctrl+V</b>.
       {:else}
-        You can open the document in tree mode instead.
+        你可以使用 tree 模式打开文档。
       {/if}
     </div>
     {#each nestedArrayPaths as nestedArrayPath}
@@ -75,7 +74,7 @@
       </button>
     {/each}
     <button type="button" class="jse-nested-array-action" on:click={() => onChangeMode(Mode.tree)}>
-      {action} in tree mode
+      使用树模式{action}
     </button>
   </div>
 

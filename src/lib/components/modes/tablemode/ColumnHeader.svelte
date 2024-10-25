@@ -41,13 +41,13 @@
   class="jse-column-header"
   class:jse-readonly={readOnly}
   on:click={handleSort}
-  title={!readOnly ? columnName + ' (Click to sort the data by this column)' : columnName}
+  title={!readOnly ? columnName + ' (点击根据该列排序)' : columnName}
 >
   <span class="jse-column-name">
     {truncate(columnName, MAX_HEADER_NAME_CHARACTERS)}
   </span>
   {#if sortDirection !== undefined}
-    <span class="jse-column-sort-icon" title={`Currently sorted in ${sortDirectionName} order`}>
+    <span class="jse-column-sort-icon" title={`当前为${sortDirectionName}`}>
       <Icon data={sortDirection === SortDirection.asc ? faCaretDown : faCaretUp} />
     </span>
   {/if}

@@ -39,7 +39,7 @@
   }
 </script>
 
-<Header title="Transform" fullScreenButton={true} bind:fullscreen {onClose}>
+<Header title="转换内容" fullScreenButton={true} bind:fullscreen {onClose}>
   <button
     slot="actions"
     type="button"

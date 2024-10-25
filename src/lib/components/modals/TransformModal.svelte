@@ -255,7 +255,7 @@
         <div class="jse-main-contents">
           <div class="jse-query-contents">
             <div class="jse-label">
-              <div class="jse-label-inner">Language</div>
+              <div class="jse-label-inner">语言</div>
             </div>
             <div class="jse-description">
               <!-- eslint-disable-next-line svelte/no-at-html-tags -->
@@ -263,21 +263,21 @@
             </div>
 
             <div class="jse-label">
-              <div class="jse-label-inner">Path</div>
+              <div class="jse-label-inner">路径</div>
             </div>
             <input
               class="jse-path"
               type="text"
               readonly
               title="Selected path"
-              value={!isEmpty(rootPath) ? stringifyJSONPath(rootPath) : '(document root)'}
+              value={!isEmpty(rootPath) ? stringifyJSONPath(rootPath) : '(整个文档)'}
             />
 
             <div class="jse-label">
               <div class="jse-label-inner">
                 <button type="button" on:click={toggleShowWizard}>
                   <Icon data={showWizard ? faCaretDown : faCaretRight} />
-                  Wizard
+                  向导
                 </button>
               </div>
             </div>
@@ -294,12 +294,12 @@
                   </div>
                 {/if}
               {:else}
-                (Only available for arrays, not for objects)
+                (仅对数组生效，对象无效)
               {/if}
             {/if}
 
             <div class="jse-label">
-              <div class="jse-label-inner">Query</div>
+              <div class="jse-label-inner">查询</div>
             </div>
             <textarea
               bind:this={refQueryInput}
@@ -314,7 +314,7 @@
                 <div class="jse-label-inner">
                   <button type="button" on:click={toggleShowOriginal}>
                     <Icon data={showOriginal ? faCaretDown : faCaretRight} />
-                    Original
+                    源数据
                   </button>
                 </div>
               </div>
@@ -405,7 +405,7 @@
             use:focus
             disabled={!!previewError}
           >
-            Transform
+            转换
           </button>
         </div>
       </div>

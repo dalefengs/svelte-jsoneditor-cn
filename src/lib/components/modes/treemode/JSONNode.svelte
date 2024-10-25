@@ -593,7 +593,7 @@
           type="button"
           class="jse-expand"
           on:click={toggleExpand}
-          title="Expand or collapse this array (Ctrl+Click to expand/collapse recursively)"
+          title="展开或折叠该数组 (Ctrl+Click)"
         >
           {#if expanded}
             <Icon data={faCaretDown} />
@@ -730,7 +730,7 @@
           type="button"
           class="jse-expand"
           on:click={toggleExpand}
-          title="Expand or collapse this object (Ctrl+Click to expand/collapse recursively)"
+          title="展开或折叠该对象"
         >
           {#if expanded}
             <Icon data={faCaretDown} />

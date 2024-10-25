@@ -5,7 +5,7 @@ import { isInteger } from '$lib/utils/typeUtils.js'
 
 const description = `
 <p>
-  Enter a JavaScript function to filter, sort, or transform the data.
+  使用JavaScript函数来过滤、排序或转换数据。
 </p>
 `
 

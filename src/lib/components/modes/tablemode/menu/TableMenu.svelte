@@ -34,7 +34,7 @@
         {
           type: 'button',
           icon: faSortAmountDownAlt,
-          title: 'Sort',
+          title: '排序',
           className: 'jse-sort',
           onClick: onSort,
           disabled: readOnly || !containsValidArray
@@ -42,7 +42,7 @@
         {
           type: 'button',
           icon: faFilter,
-          title: 'Transform contents (filter, sort, project)',
+          title: '转换内容 (过滤, 排序, 分类)',
           className: 'jse-transform',
           onClick: onTransform,
           disabled: readOnly || !containsValidArray
@@ -68,7 +68,7 @@
         {
           type: 'button',
           icon: faUndo,
-          title: 'Undo (Ctrl+Z)',
+          title: '撤销 (Ctrl+Z)',
           className: 'jse-undo',
           onClick: onUndo,
           disabled: !history.canUndo
@@ -76,7 +76,7 @@
         {
           type: 'button',
           icon: faRedo,
-          title: 'Redo (Ctrl+Shift+Z)',
+          title: '重做 (Ctrl+Shift+Z)',
           className: 'jse-redo',
           onClick: onRedo,
           disabled: !history.canRedo
