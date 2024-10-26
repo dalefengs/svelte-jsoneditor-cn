@@ -119,7 +119,7 @@
   >
     <span class="jse-navigation-bar-space">
       <!-- ensure the right height (arrows have less height than the text) -->
-      {!isObjectOrArray(json) && !editing ? 'Navigation bar' : '\u00A0'}
+      {!isObjectOrArray(json) && !editing ? '导航栏' : '\u00A0'}
     </span>
 
     <Icon data={editing ? faClose : faEdit} />

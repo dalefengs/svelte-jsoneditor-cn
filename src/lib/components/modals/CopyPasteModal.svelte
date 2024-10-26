@@ -11,23 +11,23 @@
 </script>
 
 <Modal {onClose} className="jse-copy-paste">
-  <Header title="Copying and pasting" {onClose} />
+  <Header title="复制和粘贴" {onClose} />
 
   <div class="jse-modal-contents">
-    <div>These actions are unavailable via the menu. Please use:</div>
+    <div>这些操作无法通过菜单执行。请使用：</div>
 
     <div class="jse-shortcuts">
       <div class="jse-shortcut">
         <div class="jse-key">
           {ctrl}+C
         </div>
-        for copy
+        复制
       </div>
       <div class="jse-shortcut">
         <div class="jse-key">
           {ctrl}+X
         </div>
-        for cut
+        剪切
       </div>
       <div class="jse-shortcut">
         <div class="jse-key">
@@ -38,7 +38,7 @@
     </div>
 
     <div class="jse-actions">
-      <button type="button" class="jse-primary" on:click={onClose}> Close </button>
+      <button type="button" class="jse-primary" on:click={onClose}> 关闭 </button>
     </div>
   </div>
 </Modal>
