@@ -1,7 +1,8 @@
 {
   "name": "svelte-jsoneditor-cn",
-  "description": "A web-based tool to view, edit, format, transform, and validate JSON",
+  "description": "一个基于 Web 的工具，用于查看、编辑、格式化、转换和验证 JSON，汉化版",
   "version": "1.1.2",
+  "author": "dalefengs",
   "homepage": "https://github.com/dalefengs/svelte-jsoneditor-cn",
   "repository": {
     "type": "git",

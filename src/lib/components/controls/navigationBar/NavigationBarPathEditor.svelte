@@ -122,7 +122,7 @@
     type="button"
     class="jse-navigation-bar-copy"
     class:copied
-    title="Copy selected path to the clipboard"
+    title="将选中的路径复制到剪贴板"
     on:click={handleCopy}
   >
     <Icon data={faCopy} />

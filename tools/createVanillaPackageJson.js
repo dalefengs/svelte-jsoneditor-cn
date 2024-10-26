@@ -23,7 +23,7 @@ const usedDependencies = usedDependencyNames.reduce((deps, name) => {
 
 const vanillaPackage = {
   ...pkg,
-  name: 'vanilla-jsoneditor',
+  name: 'vanilla-jsoneditor-cn',
   scripts: {},
   dependencies: usedDependencies,
   peerDependencies: {}, // all peer dependencies are moved to dependencies

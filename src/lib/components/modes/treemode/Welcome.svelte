@@ -17,11 +17,11 @@
       </div>
       <button
         title={"创建一个空的 JSON 对象 (输入 '{')"}
-        on:click|stopPropagation={() => onCreateObject()}>Create object</button
+        on:click|stopPropagation={() => onCreateObject()}>创建对象</button
       >
       <button
         title={"创建一个空的 JSON 数组 (输入 '[')"}
-        on:click|stopPropagation={() => onCreateArray()}>Create array</button
+        on:click|stopPropagation={() => onCreateArray()}>创建数组</button
       >
     {/if}
   </div>

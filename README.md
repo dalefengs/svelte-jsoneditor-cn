@@ -12,7 +12,7 @@ npm run build:svelte && npm run build:vanilla
 ![图片3](https://raw.githubusercontent.com/FreezeJ/svelte-jsoneditor/main/misc/3.png)
 
 
-# svelte-jsoneditor
+# svelte-jsoneditor-cn
 
 A web-based tool to view, edit, format, transform, and validate JSON.
 
@@ -41,13 +41,13 @@ The library is written with Svelte, but can be used in plain JavaScript too and 
 For usage in a Svelte project:
 
 ```
-npm install svelte-jsoneditor
+npm install svelte-jsoneditor-cn
 ```
 
 For usage in vanilla JavaScript or frameworks like SolidJS, React, Vue, Angular, etc:
 
 ```
-npm install vanilla-jsoneditor
+npm install vanilla-jsoneditor-cn
 ```
 
 ## Use
@@ -69,7 +69,7 @@ Create a JSONEditor with two-way binding `bind:json`:
 
 ```html
 <script>
-  import { JSONEditor } from 'svelte-jsoneditor'
+  import { JSONEditor } from 'svelte-jsoneditor-cn'
 
   let content = {
     text: undefined, // can be used to pass a stringified JSON document instead
@@ -94,7 +94,7 @@ Or one-way binding:
 
 ```html
 <script>
-  import { JSONEditor } from 'svelte-jsoneditor'
+  import { JSONEditor } from 'svelte-jsoneditor-cn'
 
   let content = {
     text: undefined, // can be used to pass a stringified JSON document instead
@@ -117,23 +117,23 @@ Or one-way binding:
 
 ### Vanilla bundle (use in React, Vue, Angular, plain JavaScript, ...)
 
-The library provides a vanilla bundle of the editor via the npm library `vanilla-jsoneditor` (instead of `svelte-jsoneditor`) which can be used in any browser environment and framework. In a framework like React, Vue, or Angular, you'll need to write some wrapper code around the class interface.
+The library provides a vanilla bundle of the editor via the npm library `vanilla-jsoneditor` (instead of `svelte-jsoneditor-cn`) which can be used in any browser environment and framework. In a framework like React, Vue, or Angular, you'll need to write some wrapper code around the class interface.
 
 If you have a setup for your project with a bundler (like Vite, Rollup, or Webpack), it is best to use the default ES import:
 
 ```ts
 // for use in a React, Vue, or Angular project
-import { JSONEditor } from 'vanilla-jsoneditor'
+import { JSONEditor } from 'vanilla-jsoneditor-cn'
 ```
 
 If you want to use the library straight in the browser, use the provided standalone ES bundle:
 
 ```ts
 // for use directly in the browser
-import { createJSONEditor } from 'vanilla-jsoneditor/standalone.js'
+import { createJSONEditor } from 'vanilla-jsoneditor-cn/standalone.js'
 ```
 
-The standalone bundle contains all dependencies of `vanilla-jsoneditor`, for example `lodash-es` and `Ajv`. If you use some of these dependencies in your project too, it means that they will be bundled twice in your web application, leading to a needlessly large application size. In general, it is preferable to use the default `import { createJSONEditor } from 'vanilla-jsoneditor'` instead of the standalone bundle so dependencies can be reused.
+The standalone bundle contains all dependencies of `vanilla-jsoneditor`, for example `lodash-es` and `Ajv`. If you use some of these dependencies in your project too, it means that they will be bundled twice in your web application, leading to a needlessly large application size. In general, it is preferable to use the default `import { createJSONEditor } from 'vanilla-jsoneditor-cn'` instead of the standalone bundle so dependencies can be reused.
 
 Browser example loading the standalone ES module:
 
@@ -147,7 +147,7 @@ Browser example loading the standalone ES module:
     <div id="jsoneditor"></div>
 
     <script type="module">
-      import { createJSONEditor } from 'vanilla-jsoneditor/standalone.js'
+      import { createJSONEditor } from 'vanilla-jsoneditor-cn/standalone.js'
 
       // Or use it through a CDN (not recommended for use in production):
       // import { createJSONEditor } from 'https://unpkg.com/vanilla-jsoneditor/standalone.js'
@@ -197,7 +197,7 @@ Svelte component:
 
 ```html
 <script>
-  import { JSONEditor } from 'svelte-jsoneditor'
+  import { JSONEditor } from 'svelte-jsoneditor-cn'
 
   let content = { text: '[1,2,3]' }
 </script>
@@ -210,7 +210,7 @@ Svelte component:
 JavasScript class:
 
 ```js
-import { createJSONEditor } from 'vanilla-jsoneditor' // or 'vanilla-jsoneditor/standalone.js'
+import { createJSONEditor } from 'vanilla-jsoneditor-cn' // or 'vanilla-jsoneditor/standalone.js'
 
 const content = { text: '[1,2,3]' }
 
@@ -345,7 +345,7 @@ validator: function (json: unknown): ValidationError[]
 Validate the JSON document. For example use the built-in JSON Schema validator powered by Ajv:
 
 ```js
-import { createAjvValidator } from 'svelte-jsoneditor'
+import { createAjvValidator } from 'svelte-jsoneditor-cn'
 
 const validator = createAjvValidator({ schema, schemaDefinitions })
 ```
@@ -360,7 +360,7 @@ Configure a custom JSON parser, like [`lossless-json`](https://github.com/josdej
 
 ```html
 <script>
-  import { JSONEditor } from 'svelte-jsoneditor'
+  import { JSONEditor } from 'svelte-jsoneditor-cn'
   import { parse, stringify } from 'lossless-json'
 
   const LosslessJSONParser = { parse, stringify }
@@ -448,7 +448,7 @@ Customize rendering of the values. By default, `renderValue` is used, which rend
 For JSON Schema enums, there is a ready-made value renderer `renderJSONSchemaEnum` which renders enums using the `EnumValue` component. This can be used like:
 
 ```js
-import { renderJSONSchemaEnum, renderValue } from 'svelte-jsoneditor'
+import { renderJSONSchemaEnum, renderValue } from 'svelte-jsoneditor-cn'
 
 function onRenderValue(props) {
   // use the enum renderer, and fallback on the default renderer
@@ -625,7 +625,7 @@ import {
   jsonpathQueryLanguage,
   lodashQueryLanguage,
   javascriptQueryLanguage
-} from 'svelte-jsoneditor'
+} from 'svelte-jsoneditor-cn'
 
 const allQueryLanguages = [
   jsonQueryLanguage,
@@ -953,7 +953,7 @@ For example, to change the default blue theme color to anthracite:
 
 ```html
 <script>
-  import { JSONEditor } from 'svelte-jsoneditor'
+  import { JSONEditor } from 'svelte-jsoneditor-cn'
 
   let content = {
     text: undefined, // can be used to pass a stringified JSON document instead
@@ -989,7 +989,7 @@ Full Svelte example:
 
 ```html
 <script>
-  import { JSONEditor } from 'svelte-jsoneditor'
+  import { JSONEditor } from 'svelte-jsoneditor-cn'
 
   let content = {
     text: undefined, // can be used to pass a stringified JSON document instead
@@ -1006,7 +1006,7 @@ Full Svelte example:
 
 <style>
   /* load one or multiple themes */
-  @import 'svelte-jsoneditor/themes/jse-theme-dark.css';
+  @import 'svelte-jsoneditor-cn/themes/jse-theme-dark.css';
 </style>
 ```
 
