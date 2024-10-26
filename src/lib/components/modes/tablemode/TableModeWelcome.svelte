@@ -37,7 +37,7 @@
         ? '一个对象'
         : isJSONArray(json)
           ? '一个空数组' // note: can also be an array with objects but without properties
-          : `A ${valueType(json, parser)}`
+          : `这是一个 ${valueType(json, parser)} 类型`
 
   function countItems(nestedArrayPath: JSONPath): number {
     return (getIn(json, nestedArrayPath) as JSONPath).length
