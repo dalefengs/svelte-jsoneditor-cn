@@ -148,7 +148,7 @@ export default function ({
           type: 'button',
           onClick: () => onEditKey(),
           icon: faPen,
-          text: '编辑',
+          text: '编辑键',
           title: '编辑键 (双击编辑该键)',
           disabled: !canEditKey
         },
