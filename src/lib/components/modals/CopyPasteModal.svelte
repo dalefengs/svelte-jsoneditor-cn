@@ -16,14 +16,14 @@
   <div class="jse-modal-contents">
     <div>这些操作无法通过菜单执行。请使用：</div>
 
-    <div class="jse-shortcuts">
+    <div class="jse-shortcuts" style="margin-right: 20px;">
       <div class="jse-shortcut">
         <div class="jse-key">
           {ctrl}+C
         </div>
         复制
       </div>
-      <div class="jse-shortcut">
+      <div class="jse-shortcut" style="margin-right: 20px;">
         <div class="jse-key">
           {ctrl}+X
         </div>
@@ -33,7 +33,7 @@
         <div class="jse-key">
           {ctrl}+V
         </div>
-        for paste
+        粘贴
       </div>
     </div>
 

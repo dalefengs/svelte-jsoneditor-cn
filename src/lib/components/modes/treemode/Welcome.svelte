@@ -10,7 +10,7 @@
 <div class="jse-welcome" on:click={() => onClick()} role="none">
   <div class="jse-space jse-before"></div>
   <div class="jse-contents">
-    <div class="jse-welcome-title">Empty document</div>
+    <div class="jse-welcome-title">空文档</div>
     {#if !readOnly}
       <div class="jse-welcome-info">
         您可以使用快捷键粘贴剪贴板数据 <b>Ctrl+V</b>, 或使用以下选项:
