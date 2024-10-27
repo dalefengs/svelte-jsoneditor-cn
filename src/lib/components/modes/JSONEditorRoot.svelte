@@ -155,22 +155,22 @@
   $: modeMenuItems = [
     {
       type: 'button',
-      text: 'text',
-      title: `切换到文本模式 (当前模式: ${mode})`,
+      text: '文本视图',
+      title: `切换到文本视图 (当前模式: ${mode})`,
       className: 'jse-group-button jse-first' + (mode === Mode.text ? ' jse-selected' : ''),
       onClick: () => onChangeMode(Mode.text)
     },
     {
       type: 'button',
-      text: 'tree',
-      title: `切换到树形格式 (当前模式: ${mode})`,
+      text: '树形视图',
+      title: `切换到树形视图 (当前模式: ${mode})`,
       className: 'jse-group-button ' + (mode === Mode.tree ? ' jse-selected' : ''),
       onClick: () => onChangeMode(Mode.tree)
     },
     {
       type: 'button',
-      text: 'table',
-      title: `切换到表格模式 (当前模式: ${mode})`,
+      text: '表格视图',
+      title: `切换到表格视图 (当前模式: ${mode})`,
       className: 'jse-group-button jse-last' + (mode === Mode.table ? ' jse-selected' : ''),
       onClick: () => onChangeMode(Mode.table)
     }

@@ -1879,8 +1879,8 @@
           actions={[
             {
               icon: faWrench,
-              text: 'Paste as JSON instead',
-              title: 'Paste the text as JSON instead of a single value',
+              text: '请粘贴为 JSON 格式',
+              title: '将文本粘贴为 JSON 格式，而不是单个值',
               // We use mousedown here instead of click: this message pops up
               // whilst the user is editing a value. When clicking this button,
               // the actual value is applied and the event is not propagated
@@ -1888,8 +1888,8 @@
               onMouseDown: handleParsePastedJson
             },
             {
-              text: 'Leave as is',
-              title: 'Keep the pasted content as a single value',
+              text: '保持原样',
+              title: '将粘贴的内容保留为单一值',
               onClick: handleClearPastedJson
             }
           ]}
@@ -1899,19 +1899,19 @@
       {#if textIsRepaired}
         <Message
           type="success"
-          message="The loaded JSON document was invalid but is successfully repaired."
+          message="加载的 JSON 文档无效，但已成功修复。"
           actions={!readOnly
             ? [
                 {
                   icon: faCheck,
-                  text: 'Ok',
-                  title: 'Accept the repaired document',
+                  text: '确认',
+                  title: '接受修复后的文件',
                   onClick: acceptAutoRepair
                 },
                 {
                   icon: faCode,
-                  text: 'Repair manually instead',
-                  title: 'Leave the document unchanged and repair it manually instead',
+                  text: '改为手动修复',
+                  title: '保持文件不变，改为手动修复',
                   onClick: handleRequestRepair
                 }
               ]
@@ -1924,13 +1924,13 @@
     {:else if parseError && text !== undefined && text !== ''}
       <Message
         type="error"
-        message="The loaded JSON document is invalid and could not be repaired automatically."
+        message="加载的JSON文档无效，无法自动修复。"
         actions={!readOnly
           ? [
               {
                 icon: faCode,
-                text: 'Repair manually',
-                title: 'Open the document in "code" mode and repair it manually',
+                text: '手动修复',
+                title: '以 "文本视图" 模式打开文档并手动修复',
                 onClick: handleRequestRepair
               }
             ]

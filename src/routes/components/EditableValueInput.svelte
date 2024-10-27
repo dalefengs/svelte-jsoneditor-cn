@@ -96,8 +96,8 @@
   on:keydown={handleKeyDown}
   autofocus
 />
-<button type="button" class="apply" on:click={apply}>Apply</button>
-<button type="button" class="cancel" on:click={cancel}>Cancel</button>
+<button type="button" class="apply" on:click={apply}>应用</button>
+<button type="button" class="cancel" on:click={cancel}>取消</button>
 
 <style>
   input.jse-value.jse-custom-input {

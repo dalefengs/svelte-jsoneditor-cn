@@ -1926,13 +1926,13 @@
       {:else}
         <Message
           type="error"
-          message="The loaded JSON document is invalid and could not be repaired automatically."
+          message="加载的JSON文档无效，无法自动修复。"
           actions={!readOnly
             ? [
                 {
                   icon: faCode,
-                  text: 'Repair manually',
-                  title: 'Open the document in "code" mode and repair it manually',
+                  text: '手动修复',
+                  title: '以 "文本视图" 模式打开文档并手动修复',
                   onClick: handleRequestRepair
                 }
               ]
@@ -1975,14 +1975,14 @@
       {#if pastedJson}
         <Message
           type="info"
-          message={`You pasted a JSON ${
+          message={`你粘贴了一个 JSON ${
             Array.isArray(pastedJson.contents) ? 'array' : 'object'
           } as text`}
           actions={[
             {
               icon: faWrench,
-              text: 'Paste as JSON instead',
-              title: 'Replace the value with the pasted JSON',
+              text: '请粘贴为 JSON 格式',
+              title: '用粘贴的 JSON 替换值',
               // We use mousedown here instead of click: this message pops up
               // whilst the user is editing a value. When clicking this button,
               // the actual value is applied and the event is not propagated
@@ -1990,8 +1990,8 @@
               onMouseDown: handleParsePastedJson
             },
             {
-              text: 'Leave as is',
-              title: 'Keep the JSON embedded in the value',
+              text: '保持原样',
+              title: '将 JSON 嵌入值中',
               onClick: handleClearPastedJson
             }
           ]}
@@ -2001,19 +2001,19 @@
       {#if textIsRepaired}
         <Message
           type="success"
-          message="The loaded JSON document was invalid but is successfully repaired."
+          message="加载的 JSON 文档无效，但已成功修复。"
           actions={!readOnly
             ? [
                 {
                   icon: faCheck,
-                  text: 'Ok',
-                  title: 'Accept the repaired document',
+                  text: '确认',
+                  title: '接受修复后的文档',
                   onClick: acceptAutoRepair
                 },
                 {
                   icon: faCode,
-                  text: 'Repair manually instead',
-                  title: 'Leave the document unchanged and repair it manually instead',
+                  text: '改为手动修复',
+                  title: '保持文件不变，改为手动修复',
                   onClick: handleRequestRepair
                 }
               ]

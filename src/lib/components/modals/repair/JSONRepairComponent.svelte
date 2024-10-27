@@ -106,15 +106,15 @@
 
   $: gotoAction = {
     icon: faArrowDown,
-    text: 'Show me',
-    title: 'Scroll to the error location',
+    text: '一键定位',
+    title: '跳转到解析错误位置',
     onClick: goToError
   }
 
   $: repairAction = {
     icon: faWrench,
-    text: 'Auto repair',
-    title: 'Automatically repair JSON',
+    text: '自动修复',
+    title: '自动修复JSON',
     onClick: handleRepair
   }
 
@@ -123,8 +123,8 @@
   $: successActions = [
     {
       icon: faCheck,
-      text: 'Apply',
-      title: 'Apply fixed JSON',
+      text: '应用',
+      title: '应用修复完成的JSON',
       disabled: readOnly,
       onClick: handleApply
     }
@@ -133,7 +133,7 @@
 
 <div class="jse-json-repair-component">
   <Menu {items}>
-    <div slot="left" class="jse-info">Repair invalid JSON, then click apply</div>
+    <div slot="left" class="jse-info">修复无效的 JSON，然后单击 “应用”</div>
   </Menu>
 
   {#if error}
@@ -146,7 +146,7 @@
   {:else}
     <Message
       type="success"
-      message="JSON is valid now and can be parsed."
+      message="JSON 现在有效，可以解析。"
       actions={successActions}
     />
   {/if}
