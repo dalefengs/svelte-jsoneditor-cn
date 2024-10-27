@@ -976,8 +976,8 @@
 
   const repairActionShowMe = {
     icon: faEye,
-    text: 'Show me',
-    title: 'Move to the parse error location',
+    text: '一键定位',
+    title: '跳转到解析错误位置',
     onClick: handleShowMe
   }
 
@@ -1027,11 +1027,11 @@
       <Message
         icon={faExclamationTriangle}
         type="error"
-        message={`The JSON document is larger than ${formatSize(
+        message={`JSON 文档的大小超过了 ${formatSize(
           MAX_DOCUMENT_SIZE_TEXT_MODE,
           1024
         )}, ` +
-          `and may crash your browser when loading it in text mode. Actual size: ${formatSize(
+          `可能会在以文本模式加载时导致程序崩溃。实际大小: ${formatSize(
             text.length,
             1024
           )}.`}
@@ -1079,18 +1079,18 @@
       {#if !jsonParseError && askToFormatApplied && needsFormatting(text)}
         <Message
           type="success"
-          message="Do you want to format the JSON?"
+          message="您是否想格式化 JSON?"
           actions={[
             {
               icon: faJSONEditorFormat,
-              text: 'Format',
-              title: 'Format JSON: add proper indentation and new lines (Ctrl+I)',
+              text: '格式化',
+              title: '格式化 JSON：添加适当的缩进和换行 (Ctrl+I)',
               onClick: handleFormat
             },
             {
               icon: faTimes,
-              text: 'No thanks',
-              title: 'Close this message',
+              text: '不了，谢谢',
+              title: '关闭此消息',
               onClick: () => (askToFormatApplied = false)
             }
           ]}
