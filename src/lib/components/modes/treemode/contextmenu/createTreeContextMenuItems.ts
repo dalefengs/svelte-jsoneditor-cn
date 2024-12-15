@@ -175,7 +175,7 @@ export default function ({
             {
               type: 'button',
               icon: enforceString ? faCheckSquare : faSquare,
-              text: '强制字符串',
+              text: '强制转为字符串',
               title: '数字强制转成字符串',
               onClick: () => onToggleEnforceString(),
               disabled: !canEnforceString

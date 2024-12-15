@@ -7,7 +7,7 @@ import { isEqualParser } from '$lib/utils/jsonUtils.js'
 
 const description = `
 <p>
-  输入一个 <a href="https://jmespath.org" target="_blank" rel="noopener noreferrer">JMESPath</a> 查询
+  输入一个 <a href="https://jmespath.org" target="_blank" rel="noopener noreferrer">JMESPath(jmespath.org)</a> 查询
   来过滤、排序或转换 JSON 数据。
   要学习 JMESPath，请访问<a href="https://jmespath.org/tutorial.html" target="_blank" rel="noopener noreferrer">交互式教程</a>。
 </p>

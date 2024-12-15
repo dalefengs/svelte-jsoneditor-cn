@@ -354,7 +354,7 @@
             </div>
             <div class="jse-preview-data">
               <div class="jse-label">
-                <div class="jse-label-inner">Preview</div>
+                <div class="jse-label-inner">预览</div>
               </div>
               {#if !previewError}
                 <TreeMode

@@ -6,7 +6,7 @@ import type { JSONPath } from 'immutable-json-patch'
 const description = `
 <p>
   输入一个 <a href="https://jsonquerylang.org" target="_blank" 
-  rel="noopener noreferrer">JSON Query</a> 函数来过滤、排序或转换数据。
+  rel="noopener noreferrer">JSON Query(jsonquerylang.org)</a> 函数来过滤、排序或转换数据。
   你可以使用诸如 <code>get</code>、<code>filter</code>、
   <code>sort</code>、<code>pick</code>、<code>groupBy</code>、<code>uniq</code> 等函数。
   示例查询：<code>filter(.age >= 18)</code>

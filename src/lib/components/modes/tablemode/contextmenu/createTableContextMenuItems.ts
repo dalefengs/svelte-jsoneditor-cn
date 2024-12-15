@@ -75,15 +75,15 @@ export default function ({
         {
           type: 'column',
           items: [
-            { type: 'label', text: 'Table cell:' },
+            { type: 'label', text: '表格单元格:' },
             {
               type: 'dropdown-button',
               main: {
                 type: 'button',
                 onClick: () => onEditValue(),
                 icon: faPen,
-                text: 'Edit',
-                title: 'Edit the value (Double-click on the value)',
+                text: '编辑',
+                title: '编辑值（双击编辑该值）',
                 disabled: !canEditValue
               },
               width: '11em',
@@ -92,15 +92,15 @@ export default function ({
                   type: 'button',
                   icon: faPen,
                   text: 'Edit',
-                  title: 'Edit the value (Double-click on the value)',
+                  title: '编辑值（双击编辑该值）',
                   onClick: () => onEditValue(),
                   disabled: !canEditValue
                 },
                 {
                   type: 'button',
                   icon: enforceString ? faCheckSquare : faSquare,
-                  text: 'Enforce string',
-                  title: 'Enforce keeping the value as string when it contains a numeric value',
+                  text: '强制转为字符串',
+                  title: '当数值包含数值时，强制将数值转为字符串',
                   onClick: () => onToggleEnforceString(),
                   disabled: !canEnforceString
                 }
@@ -112,8 +112,8 @@ export default function ({
                 type: 'button',
                 onClick: () => onCut(true),
                 icon: faCut,
-                text: 'Cut',
-                title: 'Cut selected contents, formatted with indentation (Ctrl+X)',
+                text: '剪贴',
+                title: '剪切选定内容，格式为缩进（Ctrl+X）',
                 disabled: !canCut
               },
               width: '10em',
@@ -121,16 +121,16 @@ export default function ({
                 {
                   type: 'button',
                   icon: faCut,
-                  text: 'Cut formatted',
-                  title: 'Cut selected contents, formatted with indentation (Ctrl+X)',
+                  text: '剪切并格式化',
+                  title: '剪切选定内容，格式为缩进（Ctrl+X）',
                   onClick: () => onCut(true),
                   disabled: readOnly || !hasSelectionContents
                 },
                 {
                   type: 'button',
                   icon: faCut,
-                  text: 'Cut compacted',
-                  title: 'Cut selected contents, without indentation (Ctrl+Shift+X)',
+                  text: '剪切并压缩',
+                  title: '剪切选中内容，不缩进 (Ctrl+Shift+X)',
                   onClick: () => onCut(false),
                   disabled: readOnly || !hasSelectionContents
                 }
@@ -142,8 +142,8 @@ export default function ({
                 type: 'button',
                 onClick: () => onCopy(true),
                 icon: faCopy,
-                text: 'Copy',
-                title: 'Copy selected contents, formatted with indentation (Ctrl+C)',
+                text: '复制',
+                title: '复制所选内容，格式为缩进 (Ctrl+C)',
                 disabled: !hasSelectionContents
               },
               width: '12em',
@@ -151,16 +151,16 @@ export default function ({
                 {
                   type: 'button',
                   icon: faCopy,
-                  text: 'Copy formatted',
-                  title: 'Copy selected contents, formatted with indentation (Ctrl+C)',
+                  text: '复制并格式化',
+                  title: '复制所选内容，格式为缩进 (Ctrl+C)',
                   onClick: () => onCopy(false),
                   disabled: !hasSelectionContents
                 },
                 {
                   type: 'button',
                   icon: faCopy,
-                  text: 'Copy compacted',
-                  title: 'Copy selected contents, without indentation (Ctrl+Shift+C)',
+                  text: '复制并压缩',
+                  title: '复制选定内容，不缩进 (Ctrl+Shift+C)',
                   onClick: () => onCopy(false),
                   disabled: !hasSelectionContents
                 }
@@ -170,16 +170,16 @@ export default function ({
               type: 'button',
               onClick: () => onPaste(),
               icon: faPaste,
-              text: 'Paste',
-              title: 'Paste clipboard contents (Ctrl+V)',
+              text: '粘贴',
+              title: '粘贴剪贴板内容 (Ctrl+V)',
               disabled: readOnly || !hasSelection
             },
             {
               type: 'button',
               onClick: () => onRemove(),
               icon: faTrashCan,
-              text: 'Remove',
-              title: 'Remove selected contents (Delete)',
+              text: '删除',
+              title: '删除选定的内容（删除）',
               disabled: readOnly || !hasSelectionContents
             }
           ]
@@ -187,45 +187,45 @@ export default function ({
         {
           type: 'column',
           items: [
-            { type: 'label', text: 'Table row:' },
+            { type: 'label', text: '表格行:' },
             {
               type: 'button',
               onClick: () => onEditRow(),
               icon: faPen,
-              text: 'Edit row',
-              title: 'Edit the current row',
+              text: '编辑行',
+              title: '编辑当前行',
               disabled: readOnly || !hasSelection || !hasJson
             },
             {
               type: 'button',
               onClick: () => onDuplicateRow(),
               icon: faClone,
-              text: 'Duplicate row',
-              title: 'Duplicate the current row (Ctrl+D)',
+              text: '复制当前行',
+              title: '复制当前行 (Ctrl+D)',
               disabled: readOnly || !hasSelection || !hasJson
             },
             {
               type: 'button',
               onClick: () => onInsertBeforeRow(),
               icon: faPlus,
-              text: 'Insert before',
-              title: 'Insert a row before the current row',
+              text: "在当前行之前插入",
+              title: '在当前行之前插入一行',
               disabled: readOnly || !hasSelection || !hasJson
             },
             {
               type: 'button',
               onClick: () => onInsertAfterRow(),
               icon: faPlus,
-              text: 'Insert after',
-              title: 'Insert a row after the current row',
+              text: '在当前行之后插入',
+              title: '在当前行之后插入一行',
               disabled: readOnly || !hasSelection || !hasJson
             },
             {
               type: 'button',
               onClick: () => onRemoveRow(),
               icon: faTrashCan,
-              text: 'Remove row',
-              title: 'Remove current row',
+              text: '删除行',
+              title: '删除当前行',
               disabled: readOnly || !hasSelection || !hasJson
             }
           ]
